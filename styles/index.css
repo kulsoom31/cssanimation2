@@ -1,0 +1,141 @@
+
+----------------------------------------------------------------------------------------------------------------------*/
+
+/***********************************************************************************************************************
+A. Basic Styling
+***********************************************************************************************************************/
+
+/*-------------------------------------------
+  -- Styling - Colors, Font Size, Font Family
+-------------------------------------------*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: .9375rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-content: center;
+    background-color: rgb(121, 166, 23);
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 60px 0px 60px;
+}
+
+h1, .ts-h1 {
+    font-size: 2.5rem;
+}
+
+h2, .ts-h2 {
+    font-size: 1.5rem;
+}
+
+h3, .ts-h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5625rem;
+}
+
+h4, .ts-h4 {
+    margin-bottom: 1.875rem;
+}
+
+h5, .ts-h5 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h6, .ts-h6 {
+    font-size: .9375rem;
+}
+
+
+/*-------------------------------------------
+  -- Buttons
+-------------------------------------------*/
+
+.btn {
+    border-radius: 6.25rem;
+    border-width: .125rem;
+    box-shadow: .125rem .1875rem .9375rem rgba(0, 0, 0, .15);
+    font-weight: 600;
+    font-size: .9375rem;
+    padding: .5rem 1.25rem;
+    position: relative;
+    outline: none !important;
+    background-color: #f4b200;
+}
+
+.btn:hover .fa-arrow-right {
+    transform: translateX(.5rem);
+}
+
+.btn .fa-arrow-right {
+    transition: .6s cubic-bezier(.85, -0.37, .17, 1.45);
+    transform: translateX(0) rotate(.02deg);
+}
+
+.btn span {
+    transition: .3s ease;
+}
+
+.btn .status {
+    bottom: 0;
+    height: 1.375rem;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+}
+
+.btn .status .spinner {
+    left: .3125rem;
+    transition: .3s ease;
+    top: .1875rem;
+    position: absolute;
+    opacity: 0;
+}
+
+.btn .status .status-icon {
+    border-radius: 50%;
+    left: 0;
+    opacity: 0;
+    font-size: .625rem;
+    padding: .25rem .4375rem;
+    position: relative;
+    transition: .3s ease;
+    z-index: 1;
+    transform: scale(0);
+}
+
+.btn .status .status-icon.valid {
+    background-color: var(--green);
+}
+
+.btn .status .status-icon.invalid {
+    background-color: var(--red);
+}
+
+.btn.processing span {
+    opacity: .2;
+}
+
+.btn.processing .spinner {
+    opacity: 1;
+}
+
+.btn.done .ts-spinner {
+    opacity: 0;
+}
+
+.btn.done .status-icon {
+    transform: scale(1);
+    opacity: 1;
+}
